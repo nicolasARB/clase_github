@@ -1,0 +1,29 @@
+@mixin flex($direction, $justifiy, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifiy;
+    align-items: $align;
+}
+header{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    @include flex(row, center, center);
+    nav{
+        h1{
+            font-size: 3em;
+            color: gray;
+        }
+        ul{
+            @include flex(row, space-around, center);
+            list-style-type: none;
+            gap: 3em;
+            li{
+                a{
+                    font-size: 2em;
+                    color: gray;
+                }
+            }
+        }
+    }
+}
